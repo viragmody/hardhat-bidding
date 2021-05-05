@@ -1,0 +1,26 @@
+// Tests for bidding.sol
+
+const { expect } = require('chai');
+const bidding = require('../contracts/biddin
+
+describe("Bidding", function () {
+    let Token;
+    let hardhatToken;
+    let owner;
+    let addr1;
+
+    beforeEach(async function() {
+        it("Contracts deployed successfully", async function() {
+            const [owner, addr1] = await ethers.getSigners();
+            const Bidding = await ethers.getContractFactory("Bidding");
+            const hardhatBidding = await Bidding.deploy();
+        });
+    })
+//    describe("Construction", function() {
+//        it("Owner creates contract instance", async function() {
+//        });
+    
+//    });
+});
+
+

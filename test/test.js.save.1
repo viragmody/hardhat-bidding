@@ -1,0 +1,20 @@
+// Tests for bidding.sol
+
+const { expect } = require('chai');
+
+describe("Bidding", function () {
+    let Bidding;
+    let hardhatBidding;
+    let owner;
+    let addr1;
+
+    beforeEach(async function() {
+        const [owner, addr1] = await ethers.getSigners();
+        const Bidding = await ethers.getContractFactory("Bidding");
+        const hardhatBidding = await Bidding.deploy(50, 50, "cat");
+        expect(await hardhatBidding.test()).to.equal(50);
+});
+        it("MinBid is", async function() {
+            expect(await hardhatBidding.test()).to.equal.to(50);
+       });
+});
